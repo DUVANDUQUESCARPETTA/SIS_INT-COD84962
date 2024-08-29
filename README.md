@@ -3,7 +3,7 @@ REPOSITORIO  MODELOS DE TRABAJO LARGO CON OLLANA
 # LLm repositorio
 ## 1 Instalacion de ollama
 
-Accedemos a la pagina(ollama)(curl -fsSL https://ollama.com/install.sh | sh)en linux terminal y ejecutar el siguiente comando:
+Accedemos a la pagina [Ollama](curl -fsSL https://ollama.com/install.sh | sh)en linux terminal y ejecutar el siguiente comando:
 
 ````bash
 
@@ -19,7 +19,7 @@ $ollama server
 
 ## 3 DESCARGAR  ALGUN MODELO
 
- En la pagina  de [model] (https://ollama.com/library) se buca el modelo deseado y se descarga con el siguiente comando:
+ En la pagina  de [model](https://ollama.com/library) se buca el modelo deseado y se descarga con el siguiente comando:
 
  ````bash
  $ ollama pull tinyllama
