@@ -44,5 +44,3 @@ curl -X POST http://localhost:11434/api/generate -d '{
   "stream": false
 }' -o salida2.md
 ````
-
-
