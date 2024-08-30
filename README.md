@@ -1,26 +1,48 @@
 # SIS_INT-COD84962
 REPOSITORIO  MODELOS DE TRABAJO LARGO CON OLLANA
-# LLm repositorio
-## 1 Instalacion de ollama
+# SistemasInteligentes
+repositorio de sistemas inteligentes
+# LLM repositorio
 
-Accedemos a la pagina [Ollama](curl -fsSL https://ollama.com/install.sh | sh)en linux terminal y ejecutar el siguiente comando:
+## 1.Instalacion de ollama
+accedemos a la pagina de [ollama] (https://ollama.com/download/linux), en linux terminal y ejecutar el siguiente comando: 
 
 ````bash
-
 $ curl -fsSL https://ollama.com/install.sh | sh
 ````
-
-## 2 EJECUTAR EL SERVIDOR
-Una vez intalado se ejecuta el servidor con el sigueinte comando:
+pagina de documentacion api [ollamaDoc](https://github.com/ollama/ollama/blob/main/docs/api.md)
+## 2. Ejecutar el servidor
+Una vez instalado  se ejecuta el servidor con el siguiente comando:
 
 ````bash
-$ollama server
+$ ollama serve
 ````
 
-## 3 DESCARGAR  ALGUN MODELO
+## 3. Descargar algun modelo
 
- En la pagina  de [model](https://ollama.com/library) se buca el modelo deseado y se descarga con el siguiente comando:
+En la pagina de [modelos] (https://ollama.com/library) se busca el modelo deseado y se descraga con el siguiente comando, en otra terminal :
 
- ````bash
- $ ollama pull tinyllama
- ````
+````bash
+$ ollama pull tinyllama
+````
+
+## 4. Prueba de un request a la API REST
+Paara realizar una peticion basica en la API de ollama se sigue la siguiente estructura:
+
+````bash
+curl -X POST http://localhost:11434/api/generate -d '{
+  "model": "tinyllama",
+  "prompt": "Why is the sky blue?"
+}'
+````
+## 4.1. Consulta a la API REST sin Stream
+-o es para exportar los datos recibidos
+````bash
+curl -X POST http://localhost:11434/api/generate -d '{
+  "model": "tinyllama",
+  "prompt": "Why is the sky blue?",
+  "stream": false
+}' -o salida2.md
+````
+
+
